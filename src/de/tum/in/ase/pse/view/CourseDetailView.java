@@ -38,7 +38,11 @@ public class CourseDetailView extends Stage implements Observer {
 	// TODO: Implement save(). This method should update the course with the information entered by the user and save it using the controller
 	// HINT: Use the attributes idTextField and nameTextField to retrieve the data
 	private void save() {
-
+		String id = this.idTextField.getText();
+		String name = this.nameTextField.getText();
+		course.setId(id);
+		course.setName(name);
+		controller.saveCourse(course);
 	}
 
 	// TODO: Implement update(). This method should update the view's text fields and title with the current values of the course
