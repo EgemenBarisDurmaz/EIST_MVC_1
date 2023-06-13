@@ -51,7 +51,8 @@ public class CourseListView extends Stage implements Observer {
 	// TODO: Implement createCourse(). This method should inform the controller about the creation process of a new course
 	// HINT: Creating a course is equivalent to selecting a course here
 	private void createCourse() {
-
+      Course course = new Course();
+	  this.controller.selectCourse(course);
 	}
 
 	@Override
