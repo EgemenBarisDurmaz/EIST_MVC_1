@@ -27,7 +27,10 @@ public class CourseListView extends Stage implements Observer {
 		this.courses = FXCollections.observableArrayList(courseList);
 		this.courseListView = new ListView<>(courses);
 		generateUserInterface();
-		controller.setCourseListView(this);
+		this.controller = controller;
+		for (Course course : courseList) {
+			course.addObserver(this);
+		}
 	}
 
 	// TODO: Implement addCourse(). Make sure to check for duplicates and that the list view observes the added course
