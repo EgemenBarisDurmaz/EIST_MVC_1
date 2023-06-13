@@ -41,9 +41,11 @@ public class CourseListView extends Stage implements Observer {
 			course.addObserver(this);
 		}
 	}
-	// TODO: Implement selectCourse(). This method should send the controller the information to open up a new detail view
-	private void selectCourse(Course course) {
 
+	private void selectCourse(Course course) {
+		if (course != null) {
+			controller.selectCourse(course);
+		}
 	}
 
 	// TODO: Implement createCourse(). This method should inform the controller about the creation process of a new course
