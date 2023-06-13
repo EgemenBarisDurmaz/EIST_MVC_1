@@ -51,7 +51,11 @@ public class CourseDetailView extends Stage implements Observer {
 	// HINT: JavaFX provides a method setTitle(String)
 	@Override
 	public void update() {
-     setTitle(course.toString());
+     //setTitle(course.toString());
+	 //controller.saveCourse(course);
+		idTextField.setText(course.getId());
+		nameTextField.setText(course.getName());
+		setTitle(course.getId() + " " + course.getName());
 	}
 
 	private void generateUserInterface() {
