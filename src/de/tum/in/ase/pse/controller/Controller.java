@@ -14,10 +14,11 @@ public class Controller {
 	public void saveCourse(Course course) {
 		courseListView.addCourse(course);
 		course.notifyObservers();
-		courseDetailView = new CourseDetailView(this, course);
 	}
 	// TODO: Implement selectCourse(). This method should initialize courseDetailView and display it
-
+	public void selectCourse(Course course) {
+		courseDetailView = new CourseDetailView(this, course);
+	}
 	public void setCourseListView(CourseListView courseListView) {
 		this.courseListView = courseListView;
 	}
