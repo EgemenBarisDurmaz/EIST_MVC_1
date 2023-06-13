@@ -24,10 +24,14 @@ public class CourseListView extends Stage implements Observer {
 
 	// TODO: Update the constructor. Make sure that all parameters are set correctly and the view observes all courses
 	public CourseListView(Controller controller, List<Course> courseList) {
-		this.courses = FXCollections.observableArrayList(courseList);
+		this.courses = FXCollections.observableArrayList();
 		this.courseListView = new ListView<>(courses);
 		generateUserInterface();
+		this.controller = controller;
 		controller.setCourseListView(this);
+		for (Course course : courseList) {
+			addCourse(course);
+		}
 	}
 
 
