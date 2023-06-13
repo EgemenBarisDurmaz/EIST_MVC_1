@@ -22,7 +22,6 @@ public class CourseListView extends Stage implements Observer {
 	private Controller controller;
 	private Button createButton;
 
-	// TODO: Update the constructor. Make sure that all parameters are set correctly and the view observes all courses
 	public CourseListView(Controller controller, List<Course> courseList) {
 		this.courses = FXCollections.observableArrayList();
 		this.courseListView = new ListView<>(courses);
