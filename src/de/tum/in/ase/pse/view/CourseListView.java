@@ -52,7 +52,8 @@ public class CourseListView extends Stage implements Observer {
 	// HINT: Creating a course is equivalent to selecting a course here
 	private void createCourse() {
       Course course = new Course();
-	  this.controller.selectCourse(course);
+	  this.selectCourse(course);
+	  //this.controller.selectCourse(course);
 	}
 
 	@Override
