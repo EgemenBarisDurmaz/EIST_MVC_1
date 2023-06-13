@@ -55,7 +55,7 @@ public class CourseDetailView extends Stage implements Observer {
 	 //controller.saveCourse(course);
 		idTextField.setText(course.getId());
 		nameTextField.setText(course.getName());
-		setTitle(course.getId() + " " + course.getName());
+		setTitle(course.toString());
 	}
 
 	private void generateUserInterface() {
