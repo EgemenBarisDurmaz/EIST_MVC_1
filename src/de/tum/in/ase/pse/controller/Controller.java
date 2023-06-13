@@ -18,6 +18,7 @@ public class Controller {
 	// TODO: Implement selectCourse(). This method should initialize courseDetailView and display it
 	public void selectCourse(Course course) {
 		courseDetailView = new CourseDetailView(this, course);
+		courseListView.show();
 	}
 	public void setCourseListView(CourseListView courseListView) {
 		this.courseListView = courseListView;
