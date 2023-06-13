@@ -30,7 +30,7 @@ public class CourseListView extends Stage implements Observer {
 		controller.setCourseListView(this);
 	}
 
-	// TODO: Implement addCourse(). Make sure to check for duplicates and that the list view observes the added course
+
 	public void addCourse(Course course) {
 		if (!courses.contains(course)) {
 			courses.add(course);

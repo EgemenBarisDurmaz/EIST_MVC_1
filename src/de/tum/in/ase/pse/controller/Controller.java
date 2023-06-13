@@ -11,7 +11,11 @@ public class Controller {
 	private CourseDetailView courseDetailView;
 
 	// TODO: Implement saveCourse(). This method should add the course to the list view and notify the observers
-
+	public void saveCourse(Course course) {
+		courseDetailView = new CourseDetailView(this, course);
+		courseListView.addCourse(course);
+		course.notifyObservers();
+	}
 	// TODO: Implement selectCourse(). This method should initialize courseDetailView and display it
 
 	public void setCourseListView(CourseListView courseListView) {
